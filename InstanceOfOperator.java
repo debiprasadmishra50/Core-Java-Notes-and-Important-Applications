@@ -7,7 +7,6 @@ public class InstanceOfOperator
 		if(num1  instanceof Character  || num2 instanceof Character)
 		{
 			return ((Character)num1).charValue()+((Character)num2).charValue();
-			
 		}
 		if(num1  instanceof Byte || num2 instanceof Byte)
 		{
@@ -42,7 +41,7 @@ public class InstanceOfOperator
 	public static void main(String[] args)
 	{
 		
-		Object Result=add(10l,20l);
+		Object Result=add("A","BA");
 		System.out.println(Result);
 		
 		
