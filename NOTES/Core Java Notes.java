@@ -10302,6 +10302,33 @@ public class Test extends Frame
 
 Important Programs
 ============================================
+// Enter Specific Values with Regular Expression
+import java.util.Scanner;
+
+public class EnteringSpecificValue {
+	static Scanner sc = new Scanner(System.in);
+	static String choice;
+	private final static String regex = "[0-9]";
+	
+	public static void main(String[] args) {
+		EnteringSpecificValue.input();
+	}
+
+	private static void input() {
+		System.out.println("Enter a number");
+		choice = sc.next();
+	
+		if(choice.matches(regex))
+		{
+			System.out.println(choice);
+		}
+		else {
+			System.out.println("Please Enter a valid Number");
+			EnteringSpecificValue.input();
+		}
+	}
+}
+
 
 
 // public interface Test 
@@ -10661,11 +10688,622 @@ public class LimitationInJava
 
 
 
+Tricky Programs
+=============================
+
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+//class MyThread extends Thread {
+//	
+//	@Override
+//	public void run() {
+//		System.out.println("In run method : thread name is "+Thread.currentThread().getName());
+//	}
+//}
+public class Test {
+	public static void main(String[] args) 
+	{
+//		int x,y,z;
+//		for (x = 0; x <= 3; x++) 
+//			for(y = 1; y < 4; y++)
+//				for(z=2; z < 5; z++)
+//					if((x==y) && (y==z))
+//						System.out.println((x/x)*x);
+// ===================================================================================		
+//		Thread thread = new MyThread();
+////		thread.run();
+//		thread.start();
+//		thread.run();
+//		System.out.println("In main method : thread name is "+Thread.currentThread().getName());
+// ===============================================================================		
+//		int a = 10_0_0;
+//		double b = 10_0.0__0_1;
+//		System.out.println(a+"\t"+b);
+//		System.out.println(a*b);
+//		System.out.println((int)b*a);
+//		System.out.println((int)(b*a));
+//		System.out.println((byte)(b*a));
+// ========================================================================================		
+//		BigDecimal pi = BigDecimal.ZERO;
+//		for (int k = 0; k < 50.01; k++) {
+//		    BigDecimal a0 = new BigDecimal(16).pow(k);
+//		    BigDecimal a1 = new BigDecimal(4).divide(new BigDecimal(8*k+1), 20, RoundingMode.HALF_UP);
+//		    BigDecimal a2 = new BigDecimal(2).divide(new BigDecimal(8*k+4), 20, RoundingMode.HALF_UP);
+//		    BigDecimal a3 = new BigDecimal(1).divide(new BigDecimal(8*k+5), 20, RoundingMode.HALF_UP);
+//		    BigDecimal a4 = new BigDecimal(1).divide(new BigDecimal(8*k+6), 20, RoundingMode.HALF_UP);
+//		    BigDecimal a5 = a1.subtract(a2).subtract(a3).subtract(a4);
+//		    BigDecimal a6 = BigDecimal.ONE.divide(a0, 20, RoundingMode.HALF_UP);
+//		    pi.add(a5.multiply(a6));
+//		    System.out.println(pi);
+//		}
+//	========================================================================================
+//		int sum = 4;
+//		for (int i = 0; i <= 5; i++) {
+//			if(i == 3) {
+//				break;//continue;
+//				sum = sum * i; // Unreacheble Code
+//			}
+//			System.out.println(sum);
+//		}
+//	=========================================================================================
+//		if(args.length > 0)
+//			System.out.println(args.length);
+//	} // main() ending
+//		String args[] = {"1","2"}; // class variable
+//	=========================================================================================
+//		class Super{
+//			public int index = 1;
+//		}
+//
+//		public class App extends Super{
+//			public App(int index) { // To get 10 as O/P, either use this.index = index OR change the local variable name in the constructor signature 
+//				index = index;
+//			}
+//			
+//			public static void main(String[] args) {
+//				App myApp = new App(10);
+//				System.out.println(myApp.index); // 1
+//			}
+//		}
+//	=========================================================================================
+//		System.out.println(test());
+//	}
+//		static float test() {
+//			static float x = 0.0f; // Illegal modifiers, local variable can not anthing else except final.
+//			return ++x;
+//	}
+//	=========================================================================================		
+//		System.out.println(args[1] + args[2] + args[3]); // Pass the argument 1 2 3 4 5
+//	=========================================================================================
+		
+		
+	}
+}
+
+
+
+
+=========================================================================================================================
 
 
 
 
 
+
+
+
+
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Test 
+{ 
+//	private int i;
+//	public Test(int i) {
+//		this.i = i;
+//	}
+//	
+//	Either Override or use your own custom methods
+//@Override
+//	public int hashCode() {
+//		final int prime = 2;
+//		int result = 1;
+//		result = prime * result + i;
+//		return result;
+//	}
+//
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Test other = (Test) obj;
+//		if (i != other.i)
+//			return false;
+//		return true;
+//	}
+
+	//	public int hashCode() {
+//		return 10;
+//	}
+//	
+//	public boolean equals(Test obj) {
+//		return this==obj;
+//	}
+	public static void main(String[] args) 
+	{
+//		First 3 sections are gonna use the things in the top
+//		Test t = new Test(10); // Test@a // value representation in hexa-decimals
+//		Test t1 = new Test(15); // Test@f
+//		System.out.println(t);
+//		System.out.println(t1);
+//		Test t2 = new Test(16); // Test@10
+//		System.out.println(t2);
+// =======================================================================================================
+//		
+//		Test t = new Test(10);
+//		System.out.println(t.hashCode());
+//		Test t1 = new Test(10);
+//		System.out.println(t1.hashCode());
+//		System.out.println(t == t1);
+//		System.out.println(t.equals(t1));
+// =====================================================================================================
+		
+//		 String s = new String("Raja");
+//		 String a = new String("Raja");
+////		 String s = "Raja";
+////		 String a = "Raja";
+//		
+//		 System.out.println(s.hashCode());
+//		 System.out.println(a.hashCode());
+//		
+//		 System.out.println(System.identityHashCode(s));
+//		 System.out.println(System.identityHashCode(a));
+//		 System.out.println(s == a);
+// ==============================================================
+//		System.out.println(count());
+//		Test.count();
+// ==============================================================
+//		LocalDate date = LocalDate.of(2020, 04, 02);
+//		System.out.println(date);
+//		System.out.println(ChronoUnit.DAYS.between(LocalDate.now(), LocalDate.now()));
+//	=============================================================
+//		byte n = 1;
+//		for (byte i = 0;; i++) {
+//			if (i < 3)
+//				System.out.println("Hi" + i);
+////			n++;
+//		}
+//	=============================================================================
+//		int n = 1, i;
+//		for(i = 1; i <= 5; i++);
+//		System.out.println(i*n);
+//	=============================================================================
+		
+		
+	}
+//	public static int count() // int or void
+//	{
+//		try {
+//			System.out.println("count()");
+//			return 1;
+//		}catch (Exception e) {
+//			return 2;
+//		}
+//		finally {
+//			System.out.println("Finally Block");
+//		}
+//		System.out.println("Hello"); // Unreachable Code
+//	}
+}
+
+//public class Test
+//{
+//	static void show()
+//	{
+//		System.out.println("show in Test");
+//	}
+//	protected class A
+//	{
+//		public void show()
+//		{
+//			System.out.println("show in A");
+//		}
+//	}
+//	public static void main(String[] args) 
+//	{
+//		new Test().new A().show();
+//	}
+//}
+//class Demo
+//{
+//	public static void main(String[] args) {
+//		new Test().new A().show();
+//	}
+//}
+//
+//// javac Test.java
+//// java Test
+//// java Demo
+
+
+
+
+
+
+
+
+
+
+
+=============================================================================================================================
+
+
+
+
+
+
+
+
+import java.util.Arrays;
+
+//public class Test {
+//	public static void main(String[] args) {
+//		int [] a = {1,2,3,4};
+//		int [] b = {2,3,1,0};
+//
+//		System.out.println(a==b);
+//		System.out.println(a.hashCode()+"\t"+b.hashCode());
+//		System.out.println(a.equals(b)); // Reference Checked
+//		
+//		boolean equals = Arrays.equals(a, b); // Array Elements check
+//		System.out.println(equals);
+//		
+//		System.out.println(a[(a=b)[3]]+" "+a[3]); // assign b reference to a, get the b[] value, then print a[], then assign b values to a, which is why everything was true, based on associativity and precedence concept
+////		System.out.println(a[(a=b)[0]]);
+////		System.out.println(a[(a=b)[1]]);
+////		System.out.println(a[(a=b)[2]]);
+//		
+//		for (int i : a) {
+//			System.out.print(i+"\t"); // 2	 3	 1	 0	
+//		}
+//		
+//		System.out.println("\n"+(a==b));
+//		System.out.println(a.hashCode()+"\t"+b.hashCode());
+//		System.out.println(a.equals(b)); // Reference Checked
+//		
+//		boolean equals1 = Arrays.equals(a, b); // Array Elements check
+//		System.out.println(equals1);
+//		
+//		System.out.println(Arrays.hashCode(a));
+//	}
+//}
+
+//public class Test {
+//	final int a ;
+//	public Test() {
+//		a = 2;
+//	}
+//	public Test(int x) {
+//		this.a = x;
+//	}
+//	
+//	public static void main(String[] args) {
+//		Test t = new Test();
+//		System.out.println(t.a);
+//		
+//		Test t1 = new Test(10);
+//		System.out.println(t1.a);
+//		
+//		Test t2 = new Test(15);
+//		System.out.println(t2.a);
+//	}
+//}
+// ========================================================================================
+//class C {
+//	int m1() {
+//		System.out.println("C m1");
+//		return 50;
+//	}
+//}
+//class A extends C{
+//	int x = super.m1();
+//	int m1() {
+//		System.out.println("A m1");
+//		return 50;
+//	}
+//}
+//class B extends A {
+//	int y = super.m1();
+//	int m1() {
+//		System.out.println("B m1");
+//		return 60;
+//	}
+//}
+//public class Test {
+//	public static void main(String[] args) {
+//		B b = new B();
+//		System.out.println("x: "+b.x);
+//		System.out.println("y: "+b.y);
+//	}
+//}
+
+public class Test {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+
+
+
+
+
+
+================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+public class Test 
+{ 
+	
+
+	public static void main(String[] args) 
+	{
+// ==============================================================================================
+//		System.out.println(Math.floor(Math.PI));
+//		System.out.println(Math.abs(Math.ceil(-2.5)));
+//		double d = Math.pow(2.5, 2.5);
+//		System.out.println(d);
+//		double res = Math.pow(Math.abs(Math.ceil(-2.5)), Math.floor(Math.PI));
+//		System.out.println(res);
+		
+		String s = "FB";
+		String s1 = "Ea";
+		System.out.println(s.hashCode()==s1.hashCode());
+		
+		String s2 = "ABC";
+		System.out.println(s2.hashCode()); //64578 // 65*31^2 + 66*31^1 + 67*31^0 = 64578
+		// Hashcode is based on formula s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1] for String
+// ===================================================================================================
+		
+	}
+}
+
+
+
+
+
+
+
+=================================================================================================================================
+
+
+
+
+
+
+
+
+
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+public class Test 
+{
+//	private int id;
+//	private final String name ;
+//	
+//	public Test() {
+//		name = "Debi";
+//	}
+//	
+//	public Test(String name) {
+//		this.name = name;
+//	}
+//	
+////	{
+////		name = "Debi";
+////	}
+	public static void main(String[] args) throws IOException 
+	{
+		
+//		int a = 1, b = 1;
+//		boolean c;
+//		c = (++a==2)&&(++b==2);
+//		System.out.println(a+" "+b+" "+c);
+//		
+//		a=b=1; 
+//		c = (++a==1)&&(++b==1);
+//		System.out.println(a+" "+b+" "+c);
+// =================================================================================================
+//		int a = 1, b = 2 ;
+////		String res = a>b ? "Hello" : "Hi";
+////		System.out.println(res);
+
+//		System.out.println( val ? "Hello." : "Hi ); // val has to be a boolean
+		
+//		for(System.out.println("Java");a>b?true:false;System.exit(0)) // a>b can happen as we can manipulate variable, but no constants, if we do 1>2 no error, but if we do 2>1, error, Unreacheble statement
+//		{
+//			System.out.println("Hello");
+//		}
+// run the program again without exit(0) and make the 1 as 3 so that it won't satisfy the 1st expression
+		
+// =============================================================================================
+		// printing a message withour println()
+		
+//		System.out.write("Hello\n".getBytes());
+//		System.out.format("%s", "Hello Java\n");
+//		
+//		PrintStream myout =  new PrintStream(new FileOutputStream(FileDescriptor.out));
+//        myout.print("i love Java");
+        
+// =============================================================================================
+		
+//		Test t = new Test(10);
+//		Test t1 = new Test(10);
+//		System.out.println(t.hashCode()+"\t"+t1.hashCode());
+//		System.out.println(t == t1);
+//		System.out.println(t.equals(t1));
+// ==============================================================================================
+		
+		
+	}
+//	private int i;
+//	public Test(int i){
+//		this.i = i;
+//	}
+//	public int hashCode() {
+//		return 10;
+//	}
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + i;
+//		return result;
+//	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Test other = (Test) obj;
+//		if (i != other.i)
+//			return false;
+//		return true;
+//	}
+	
+}
+
+
+
+
+
+
+
+
+==============================================================================================================================
+
+
+
+
+
+
+
+
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+
+public class Test 
+{
+//	private int id;
+//	private final String name ;
+//	
+//	public Test() {
+//		name = "Debi";
+//	}
+//	
+//	public Test(String name) {
+//		this.name = name;
+//	}
+//	
+////	{
+////		name = "Debi";
+////	}
+	public static void main(String[] args) throws IOException 
+	{
+		
+//		int a = 1, b = 1;
+//		boolean c;
+//		c = (++a==2)&&(++b==2);
+//		System.out.println(a+" "+b+" "+c);
+//		
+//		a=b=1; 
+//		c = (++a==1)&&(++b==1);
+//		System.out.println(a+" "+b+" "+c);
+// =================================================================================================
+//		int a = 1, b = 2 ;
+////		String res = a>b ? "Hello" : "Hi";
+////		System.out.println(res);
+
+//		System.out.println( val ? "Hello." : "Hi ); // val has to be a boolean
+		
+//		for(System.out.println("Java");a>b?true:false;System.exit(0)) // a>b can happen as we can manipulate variable, but no constants, if we do 1>2 no error, but if we do 2>1, error, Unreacheble statement
+//		{
+//			System.out.println("Hello");
+//		}
+// run the program again without exit(0) and make the 1 as 3 so that it won't satisfy the 1st expression
+		
+// =============================================================================================
+		// printing a message withour println()
+		
+//		System.out.write("Hello\n".getBytes());
+//		System.out.format("%s", "Hello Java\n");
+//		
+//		PrintStream myout =  new PrintStream(new FileOutputStream(FileDescriptor.out));
+//        myout.print("i love Java");
+        
+// =============================================================================================
+		
+//		Test t = new Test(10);
+//		Test t1 = new Test(10);
+//		System.out.println(t.hashCode()+"\t"+t1.hashCode());
+//		System.out.println(t == t1);
+//		System.out.println(t.equals(t1));
+// ==============================================================================================
+		
+		
+	}
+//	private int i;
+//	public Test(int i){
+//		this.i = i;
+//	}
+//	public int hashCode() {
+//		return 10;
+//	}
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + i;
+//		return result;
+//	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Test other = (Test) obj;
+//		if (i != other.i)
+//			return false;
+//		return true;
+//	}
+	
+}
 
 
 
